@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ransom Solution Inc. — CAD, BIM &amp; GIS Documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Precise, permit-ready CAD, BIM, and GIS documentation for South Florida. Design Development, Paper-to-CAD, As-Builts, Recertification/Milestone Support, and GIS mapping.">
+<link rel="canonical" href="https://portfolio.ransomsolution.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23101925' stroke='%23d9602e' stroke-width='4'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-weight='700' font-size='24' fill='%23d9602e' text-anchor='middle'%3ERS%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ransom Solution Inc.">
+<meta property="og:title" content="Ransom Solution Inc. — Project Portfolio">
+<meta property="og:description" content="Precise, permit-ready CAD, BIM, and GIS documentation for South Florida: Design Development, Paper-to-CAD, As-Builts, Milestone/Recertification Support, and GIS mapping.">
+<meta property="og:url" content="https://portfolio.ransomsolution.com/">
+<meta property="og:image" content="https://portfolio.ransomsolution.com/assets/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Ransom Solution Inc. — CAD, BIM and GIS documentation for South Florida, with an isometric drawing of a residence">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Steven Ransom, Ransom Solution Inc.">
+<style>
+  :root{
+    --navy:#1b2a3d;
+    --navy-deep:#101925;
+    --blue:#2e4a6b;
+    --accent:#d9602e;
+    --paper:#f6f4ef;
+    --paper-dim:#ece8de;
+    --line:#d7d1c2;
+    --ink:#20262d;
+    --ink-soft:#52595f;
+    --white:#ffffff;
+    --radius:6px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#141a22;
+      --paper-dim:#1a222c;
+      --line:#2b3542;
+      --ink:#e8e6df;
+      --ink-soft:#a8aeb5;
+      --white:#1a222c;
+      --navy:#223449;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141a22;
+    --paper-dim:#1a222c;
+    --line:#2b3542;
+    --ink:#e8e6df;
+    --ink-soft:#a8aeb5;
+    --white:#1a222c;
+    --navy:#223449;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px);
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+  }
+  img{max-width:100%;display:block}
+  [hidden]{display:none!important}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .4em}
+  h2{font-size:clamp(1.5rem,2.4vw,2.1rem);letter-spacing:.2px}
+  h2 .sub{display:block;font-family:inherit;font-size:.5em;color:var(--accent);font-weight:400;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.35em}
+  p{color:var(--ink-soft)}
+  .section{padding:72px 0}
+  .section-alt{background:var(--paper-dim)}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    background:var(--accent);color:#fff;border:none;
+    padding:12px 22px;border-radius:999px;font-size:.95rem;font-weight:600;
+    cursor:pointer;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(217,96,46,.35)}
+  .btn.ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.55)}
+
+  /* ---------- Header / Hero ---------- */
+  header.hero{
+    position:relative;
+    background:linear-gradient(160deg,var(--navy-deep),var(--navy) 70%);
+    color:#f3f1ea;
+    padding-top:calc(28px + env(safe-area-inset-top,0px));
+    overflow:hidden;
+  }
+  header.hero::before{
+    content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
+    background-image:
+      repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 48px),
+      repeating-linear-gradient(90deg, #fff 0 1px, transparent 1px 48px);
+  }
+  .navbar{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;padding-bottom:18px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px}
+  .brand .mark{width:34px;height:34px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;color:var(--accent);font-weight:700}
+  .navbar{flex-wrap:wrap;gap:12px}
+  nav.toplinks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.92rem}
+  nav.toplinks a{text-decoration:none;opacity:.85}
+  nav.toplinks a:hover{opacity:1}
+  .hero-body{position:relative;z-index:2;padding:48px 0 86px;max-width:760px}
+  .hero-body .sub{color:var(--accent);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:700}
+  .hero-body h1{font-size:clamp(2rem,4.4vw,3.1rem);color:#fff;margin:.3em 0 .3em}
+  .hero-body p.lead{color:#cfd6df;font-size:1.08rem;max-width:620px}
+  .hero-actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .hero-stats{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(255,255,255,.15)}
+  .hero-stats div{flex:1 1 150px;padding:18px 0 28px;border-right:1px solid rgba(255,255,255,.12)}
+  .hero-stats div:last-child{border-right:none}
+  .hero-stats strong{display:block;font-size:1.5rem;color:#fff;font-family:Georgia,serif}
+  .hero-stats span{font-size:.82rem;color:#aab4c0}
+
+  /* ---------- Services ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:32px}
+  .svc-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px}
+  .svc-card .num{font-family:Georgia,serif;color:var(--accent);font-size:.85rem;font-weight:700;letter-spacing:1px}
+  .svc-card h3{font-size:1.05rem;margin:.5em 0 .3em}
+  .svc-card p{font-size:.92rem;margin:0}
+
+  /* ---------- Gallery ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 30px}
+  .filters button{
+    background:var(--white);border:1px solid var(--line);color:var(--ink-soft);
+    padding:8px 16px;border-radius:999px;font-size:.85rem;cursor:pointer;
+  }
+  .filters button.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .card-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#dcd7c9;cursor:pointer}
+  .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+  .card:hover .card-media img{transform:scale(1.045)}
+  .wm{position:absolute;right:8px;bottom:7px;font-size:.66rem;color:rgba(255,255,255,.88);background:rgba(20,26,34,.38);padding:2px 7px;border-radius:3px;letter-spacing:.3px;pointer-events:none}
+  .card-media .count{position:absolute;left:8px;bottom:7px;font-size:.68rem;color:#fff;background:rgba(20,26,34,.5);padding:2px 7px;border-radius:3px}
+  .card-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .tagrow{display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.6px;font-weight:700;color:var(--accent);background:rgba(217,96,46,.1);padding:3px 8px;border-radius:4px}
+  .card-body h3{font-size:1.08rem;margin:0}
+  .county{font-size:.82rem;color:var(--ink-soft);margin:-4px 0 2px}
+  .card-body p{font-size:.9rem;margin:0}
+  .toolrow{font-size:.78rem;color:var(--ink-soft);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+  .toolrow strong{color:var(--ink);font-weight:600}
+
+  /* ---------- P2C slider ---------- */
+  .p2c-wrap{max-width:760px;margin:36px auto 0}
+  .p2c-slider{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#ddd8ca;user-select:none}
+  .p2c-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+  .p2c-slider .after-layer{clip-path:inset(0 0 0 50%)}
+  .p2c-handle{position:absolute;top:0;bottom:0;left:50%;width:0;transform:translateX(-50%);cursor:ew-resize;touch-action:none}
+  .p2c-handle::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+  .p2c-handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+  .p2c-labels{display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft);margin-top:10px;text-transform:uppercase;letter-spacing:.5px}
+
+  /* ---------- GIS ---------- */
+  .gis-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;margin-top:28px}
+  .gis-wrap img{border-radius:var(--radius);border:1px solid var(--line)}
+  @media (max-width:760px){.gis-wrap{grid-template-columns:1fr}}
+
+  /* ---------- Video reel ---------- */
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:28px}
+  video{width:100%;border-radius:var(--radius);border:1px solid var(--line);background:#000;aspect-ratio:3/4;object-fit:cover}
+  .video-cap{font-size:.82rem;color:var(--ink-soft);margin-top:8px}
+
+  /* ---------- Credentials ---------- */
+  .cred-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .cred-list li{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;font-size:.92rem;display:flex;gap:10px;align-items:flex-start}
+  .cred-list li::before{content:"✓";color:var(--accent);font-weight:700}
+
+  /* ---------- Contact / Footer ---------- */
+  .contact{background:var(--navy-deep);color:#eef1f4}
+  .contact h2{color:#fff}
+  .contact-grid{display:flex;flex-wrap:wrap;gap:34px;margin-top:22px}
+  .contact-grid a{text-decoration:none;color:#cfd6df;font-size:.98rem}
+  .contact-grid .item strong{display:block;color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+  footer{padding:26px 0;text-align:center;font-size:.78rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+
+  /* ---------- Lightbox ---------- */
+  #lightbox{position:fixed;inset:0;background:rgba(10,14,18,.92);z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+  #lightbox img{max-width:min(92vw,1100px);max-height:76vh;object-fit:contain;border-radius:4px}
+  #lightbox .lb-cap{color:#e9e9e9;font-size:.88rem;margin-top:14px;text-align:center;max-width:720px}
+  #lightbox .lb-close{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;line-height:1}
+  #lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+  #lightbox .lb-prev{left:16px}
+  #lightbox .lb-next{right:16px}
+  @media (max-width:640px){
+    .section{padding:52px 0}
+    #lightbox .lb-nav{width:38px;height:38px;font-size:1.05rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="navbar">
+      <div class="brand"><span class="mark">RS</span> RANSOM SOLUTION INC.</div>
+      <nav class="toplinks">
+        <a href="#services">Services</a>
+        <a href="#gallery">Projects</a>
+        <a href="#gis">GIS</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+        <a href="https://ransomsolution.com">ransomsolution.com&nbsp;↗</a>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <span class="sub">CAD · BIM · GIS Documentation</span>
+      <h1>Precise, permit-ready CAD, BIM, and GIS documentation for South Florida.</h1>
+      <p class="lead">Design Development drawings, paper-to-CAD conversions, as-built documentation, and milestone/recertification support for owners, engineers, and contractors across Miami-Dade, Broward, and Palm Beach.</p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn">View Projects</a>
+        <a href="#contact" class="btn ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats wrap" style="padding-inline:0">
+      <div><strong>18+ yrs</strong><span>Structural, architectural &amp; engineering design</span></div>
+      <div><strong>3 Counties</strong><span>Miami-Dade · Broward · Palm Beach</span></div>
+      <div><strong>AutoCAD · Revit</strong><span>ArcGIS Pro · Procore</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <h2><span class="sub">What We Do</span>Services</h2>
+    <p style="max-width:620px">From first field measurements to permit-ready sheets, Ransom Solution documents what's built and designs what's next.</p>
+    <div class="svc-grid">
+      <div class="svc-card"><span class="num">01</span><h3>Design Development</h3><p>Concept-to-permit drawing sets — floor plans, elevations, sections, and details.</p></div>
+      <div class="svc-card"><span class="num">02</span><h3>Paper-to-CAD</h3><p>Hand sketches and field measurements converted into clean, dimensioned CAD drawings.</p></div>
+      <div class="svc-card"><span class="num">03</span><h3>As-Built Documentation</h3><p>Damage assessment, demolition, and repair drawing sets for existing structures.</p></div>
+      <div class="svc-card"><span class="num">04</span><h3>Recertification / Milestone Support</h3><p>Documentation support for building recertification and milestone inspection programs.</p></div>
+      <div class="svc-card"><span class="num">05</span><h3>GIS Mapping</h3><p>Parcel, building, and site data integrated into working GIS scenes and map layouts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section section-alt">
+  <div class="wrap">
+    <h2><span class="sub">Selected Work</span>Project Gallery</h2>
+    <p style="max-width:620px">Project details below are generalized — client names, addresses, and identifying information have been removed or replaced throughout.</p>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="p2c" class="section">
+  <div class="wrap">
+    <h2><span class="sub">Paper → CAD</span>From Field Sketch to Finished Drawing</h2>
+    <p style="max-width:620px">Drag the slider to compare an early field-sketch concept against the finished, dimensioned CAD floor plan produced from it.</p>
+    <div class="p2c-wrap">
+      <div class="p2c-slider" id="p2cSlider">
+        <img src="assets/RS-RES-04_pre-revit-concept-floorplan.webp" alt="Before: early field-sketch floor plan concept" class="before-layer">
+        <img src="assets/RS-P2C-01_paper-to-cad-floorplan.webp" alt="After: finished dimensioned CAD floor plan" class="after-layer" id="p2cAfter">
+        <div class="p2c-handle" id="p2cHandle"></div>
+      </div>
+      <div class="p2c-labels"><span>Field Sketch</span><span>Finished CAD</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="gis" class="section section-alt">
+  <div class="wrap">
+    <div class="gis-wrap">
+      <img src="assets/RS-GIS-01_parcel-map.webp" alt="ArcGIS Pro map of Broward County parcels, buildings, and tree canopy with legend and north arrow" loading="lazy">
+      <div>
+        <h2><span class="sub">GIS</span>Parcel &amp; Site Data Integration</h2>
+        <p>Built in ArcGIS Pro: county parcel polygons, building footprints, and tree canopy layered over a working basemap — with a proper legend and north arrow — to support site analysis, due-diligence review, and documentation work across Broward County.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reel" class="section">
+  <div class="wrap">
+    <h2><span class="sub">Field Documentation</span>Video Reel</h2>
+    <p style="max-width:620px">Short walkthrough clips from field documentation visits. Muted — click to play.</p>
+    <div class="video-grid">
+      <div>
+        <video controls muted preload="none" poster="assets/RS-ASB-35-poster.jpg">
+          <source src="assets/RS-ASB-35_fire-damage-walkthrough-1.mp4" type="video/mp4">
+        </video>
+        <p class="video-cap">Interior walkthrough — fire/water damage field documentation, single-family residence.</p>
+      </div>
+      <div>
+        <video controls muted preload="none" poster="assets/RS-ASB-36-poster.jpg">
+          <source src="assets/RS-ASB-36_fire-damage-walkthrough-2.mp4" type="video/mp4">
+        </video>
+        <p class="video-cap">Exterior roofline and envelope condition, same site visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="section section-alt">
+  <div class="wrap">
+    <h2><span class="sub">Background</span>Credentials</h2>
+    <ul class="cred-list">
+      <li>18+ years in structural, architectural &amp; engineering design</li>
+      <li>OSHA 30-Hour Certified</li>
+      <li>Procore Certified Project Manager — Core Tools</li>
+      <li>Procore Certified Project Manager — Financial Management</li>
+      <li>A.S. Building Construction Technology, Broward College <em>(in progress)</em></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="wrap">
+    <h2><span class="sub" style="color:var(--accent)">Let's Talk</span>Contact</h2>
+    <p style="color:#aab4c0">Based in Plantation, FL — serving Miami-Dade, Broward &amp; Palm Beach counties.</p>
+    <div class="contact-grid">
+      <div class="item"><strong>Name</strong><a href="https://ransomsolution.com">Steven Ransom</a></div>
+      <div class="item"><strong>Phone</strong><a href="tel:+17865205762">786-520-5762</a></div>
+      <div class="item"><strong>Email</strong><a href="mailto:steven@ransomsolution.com">steven@ransomsolution.com</a></div>
+      <div class="item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/ransomsteven" rel="noopener">linkedin.com/in/ransomsteven</a></div>
+      <div class="item"><strong>Website</strong><a href="https://ransomsolution.com">ransomsolution.com</a></div>
+      <div class="item"><strong>Location</strong><span>Plantation, FL</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Project details generalized to protect client confidentiality. © Ransom Solution Inc. · <a href="https://ransomsolution.com">ransomsolution.com</a> · <a href="https://www.linkedin.com/in/ransomsteven" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<div id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+const PROJECTS = [
+  {
+    id:"res-rear-addition",
+    title:"Residential Rear Addition",
+    county:"Palm Beach County",
+    cats:["RES"],
+    tools:"AutoCAD",
+    desc:"Challenge: turn a homeowner's rear-addition concept into a code-compliant massing study that preserved the existing roofline and matched existing finishes. Result: a fully dimensioned concept sheet with elevations, a dimension table, and roof-tie-in notes ready to carry into permit-level design.",
+    images:[
+      {src:"RS-RES-01_elevations", alt:"Isometric and elevation massing study for a single-family rear addition"}
+    ]
+  },
+  {
+    id:"structural-addition",
+    title:"Residential Structural Addition",
+    county:"South Florida",
+    cats:["BIM","RES"],
+    tools:"Revit, AutoCAD",
+    desc:"Challenge: document an existing single-family structure for a proposed rear addition with limited as-built information on hand. Result: a clean, dimensioned floor plan establishing room layout and square footage as the foundation for structural and permit drawings.",
+    images:[
+      {src:"RS-RES-02_floorplan", alt:"Dimensioned existing floor plan for a residential structural addition"}
+    ]
+  },
+  {
+    id:"garage-storm",
+    title:"Garage Addition &amp; Storm Repair",
+    county:"Palm Beach County",
+    cats:["ASB","RES"],
+    tools:"AutoCAD",
+    desc:"Challenge: document extensive wind and water damage across a residence — roof framing, structural walls, windows, and doors — to support an insurance and repair scope. Result: a full demolition, structural-evaluation, and repair drawing set covering framing, roofing, and envelope repairs, coordinated with the structural engineer of record.",
+    images:[
+      {src:"RS-ASB-01_demolition-construction-plan", alt:"Demolition and construction plan for a garage addition"},
+      {src:"RS-ASB-02_site-floor-plan-notes", alt:"Site plan, floor plan, and general notes sheet"},
+      {src:"RS-ASB-03_structural-repair-site-cross-section", alt:"Structural repair site plan and cross section"},
+      {src:"RS-ASB-06_elevations-column-schedule", alt:"Elevations and damaged-column schedule"},
+      {src:"RS-ASB-13_roof-damage-evaluation", alt:"Roof damage evaluation diagram"},
+      {src:"RS-ASB-17_structural-eval-floor-plan", alt:"Structural evaluation floor plan showing area of collapse"}
+    ]
+  },
+  {
+    id:"solid-waste",
+    title:"Municipal Solid Waste Facility",
+    county:"Miami-Dade County",
+    cats:["COM","IND"],
+    tools:"AutoCAD, Revit",
+    desc:"Challenge: assess and document structural damage across two large processing areas of an active municipal solid waste facility — a confined, hazard-heavy industrial environment. Result: a coordinated site plan, floor plans, and photo-log damage assessment set used to scope structural repairs for the facility operator.",
+    images:[
+      {src:"RS-COM-01_site-plan", alt:"Site plan of a municipal solid waste processing facility"},
+      {src:"RS-COM-02_garbage-processing-floor-plan", alt:"Garbage processing building floor plan"},
+      {src:"RS-COM-03_photo-log-structural-damage", alt:"Photo log index of structural damage locations"},
+      {src:"RS-COM-06_mcc-odor-control-floorplan", alt:"MCC and odor control room floor plan"},
+      {src:"RS-COM-11_area_a-photo-A-GPB-1", alt:"Interior structural damage photo, processing area A"},
+      {src:"RS-COM-16_area_a-photo-A-GPB-40", alt:"Exterior collapsed framing, processing area A"}
+    ]
+  },
+  {
+    id:"fire-damage",
+    title:"Fire Damage Repair",
+    county:"Palm Beach County",
+    cats:["RES","ASB","P2C"],
+    tools:"Revit, AutoCAD",
+    desc:"Challenge: take a fire-damaged residence from field documentation through a full repair design, coordinated with a mechanical/electrical/plumbing engineer. Result: a complete Revit-based repair model and drawing set covering demolition, framing, and MEP tie-ins, paired with field photo and video documentation.",
+    images:[
+      {src:"RS-RES-03_fire-damage-repair-floorplan", alt:"Fire damage repair floor plan, Ransom Solution title block"},
+      {src:"RS-ASB-23_fire-damage-early-concept", alt:"Early field documentation photo, fire-damaged framing"},
+      {src:"RS-ASB-24_fire-damage-site-IMG0114jpeg", alt:"Site documentation photo, interior fire damage"},
+      {src:"RS-ASB-31_fire-damage-site-IMG58481jpeg", alt:"Site documentation photo, structural framing damage"}
+    ]
+  },
+  {
+    id:"notice-of-violation",
+    title:"Permit Compliance Documentation",
+    county:"Broward County",
+    cats:["ASB","RES"],
+    tools:"Revit, AutoCAD",
+    desc:"Challenge: document unpermitted after-the-fact construction — a room addition, a gazebo, and a shed — for a notice-of-violation compliance submittal. Result: a full floor plan, elevation, and building-section set, plus a 3D massing view, supporting the after-the-fact permit application.",
+    images:[
+      {src:"RS-RES-06_floorplan-notice-of-violation", alt:"After-the-fact floor plan for a notice of violation permit submittal"},
+      {src:"RS-RES-11_site-plan-general-notes", alt:"Site plan sheet with 3D massing view and general notes"},
+      {src:"RS-RES-12_cover-sheet-3d-view", alt:"Cover sheet with 3D axonometric view and sheet index"},
+      {src:"RS-RES-38_interior-1st-Floor---Bathroom--3----2", alt:"Interior field documentation photo, bathroom"},
+      {src:"RS-RES-44_interior-1st-Floor---Bedroom---5", alt:"Interior field documentation photo, bedroom"}
+    ]
+  },
+  {
+    id:"condo-reno",
+    title:"Condominium Unit Renovation",
+    county:"Miami-Dade County",
+    cats:["RES"],
+    tools:"AutoCAD, Revit",
+    desc:"Challenge: produce a demolition and repair floor plan set for a high-rise condominium interior renovation, coordinated with a licensed structural engineer. Result: a clean, code-referenced repair drawing set covering flooring, wall, and finish scope for permit submittal.",
+    images:[
+      {src:"RS-RES-54_demolition-repair-floorplan", alt:"Demolition and repair floor plan for a condominium unit renovation"},
+      {src:"RS-RES-55_property-record-sketch", alt:"County property record sketch used for site reference"}
+    ]
+  }
+];
+
+const CAT_LABELS = {RES:"Residential", COM:"Commercial", IND:"Industrial", ASB:"As-Built", BIM:"BIM", GIS:"GIS", P2C:"Paper-to-CAD"};
+
+const grid = document.getElementById("grid");
+const filtersEl = document.getElementById("filters");
+
+function imgTag(img, cls){
+  return `<picture>
+    <source srcset="assets/thumbs/${img.src}.webp" type="image/webp">
+    <img src="assets/${img.src}.png" alt="${img.alt}" loading="lazy" class="${cls||''}">
+  </picture>`;
+}
+
+function renderGrid(filter){
+  grid.innerHTML = PROJECTS.filter(p => filter==="ALL" || p.cats.includes(filter)).map(p => {
+    const cover = p.images[0];
+    const tags = p.cats.map(c => `<span class="tag">${CAT_LABELS[c]||c}</span>`).join("");
+    return `<article class="card" data-id="${p.id}">
+      <div class="card-media" data-project="${p.id}" data-index="0">
+        ${imgTag(cover)}
+        <span class="wm">© Ransom Solution Inc.</span>
+        ${p.images.length>1 ? `<span class="count">${p.images.length} photos</span>` : ""}
+      </div>
+      <div class="card-body">
+        <div class="tagrow">${tags}</div>
+        <h3>${p.title}</h3>
+        <div class="county">${p.county}</div>
+        <p>${p.desc}</p>
+        <div class="toolrow"><strong>Tools:</strong> ${p.tools}</div>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function renderFilters(){
+  const cats = ["ALL", ...new Set(PROJECTS.flatMap(p=>p.cats))];
+  filtersEl.innerHTML = cats.map((c,i)=>`<button data-cat="${c}" class="${i===0?'active':''}">${c==="ALL"?"All Projects":(CAT_LABELS[c]||c)}</button>`).join("");
+  filtersEl.addEventListener("click", e=>{
+    const btn = e.target.closest("button");
+    if(!btn) return;
+    filtersEl.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    renderGrid(btn.dataset.cat);
+  });
+}
+
+renderFilters();
+renderGrid("ALL");
+
+/* ---------- Lightbox ---------- */
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbCap = document.getElementById("lbCap");
+let curProject = null, curIndex = 0;
+
+function openLightbox(projectId, index){
+  curProject = PROJECTS.find(p=>p.id===projectId);
+  curIndex = index;
+  showLB();
+  lb.hidden = false;
+}
+function showLB(){
+  const img = curProject.images[curIndex];
+  lbImg.src = `assets/${img.src}.webp`;
+  lbImg.alt = img.alt;
+  lbCap.textContent = `${curProject.title} — ${img.alt}`;
+}
+grid.addEventListener("click", e=>{
+  const media = e.target.closest(".card-media");
+  if(!media) return;
+  openLightbox(media.dataset.project, 0);
+});
+document.getElementById("lbClose").addEventListener("click", ()=> lb.hidden = true);
+lb.addEventListener("click", e=>{ if(e.target===lb) lb.hidden = true; });
+document.getElementById("lbPrev").addEventListener("click", ()=>{
+  curIndex = (curIndex - 1 + curProject.images.length) % curProject.images.length;
+  showLB();
+});
+document.getElementById("lbNext").addEventListener("click", ()=>{
+  curIndex = (curIndex + 1) % curProject.images.length;
+  showLB();
+});
+document.addEventListener("keydown", e=>{
+  if(lb.hidden) return;
+  if(e.key==="Escape") lb.hidden = true;
+  if(e.key==="ArrowLeft") document.getElementById("lbPrev").click();
+  if(e.key==="ArrowRight") document.getElementById("lbNext").click();
+});
+
+/* ---------- Before/After slider ---------- */
+const slider = document.getElementById("p2cSlider");
+const handle = document.getElementById("p2cHandle");
+const afterLayer = document.getElementById("p2cAfter");
+let dragging = false;
+
+function setSlider(pct){
+  pct = Math.max(2, Math.min(98, pct));
+  afterLayer.style.clipPath = `inset(0 0 0 ${pct}%)`;
+  handle.style.left = pct + "%";
+}
+function posFromEvent(e){
+  const rect = slider.getBoundingClientRect();
+  const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+  return (x / rect.width) * 100;
+}
+slider.addEventListener("pointerdown", e=>{ dragging = true; setSlider(posFromEvent(e)); });
+window.addEventListener("pointermove", e=>{ if(dragging) setSlider(posFromEvent(e)); });
+window.addEventListener("pointerup", ()=> dragging = false);
+setSlider(50);
+</script>
+</body>
+</html>
