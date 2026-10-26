@@ -152,6 +152,8 @@
   .p2c-handle::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
   .p2c-handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 2px 10px rgba(0,0,0,.3)}
   .p2c-labels{display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-soft);margin-top:10px;text-transform:uppercase;letter-spacing:.5px}
+  .p2c-wrap.wide{max-width:1040px}
+  .p2c-slider.wide{aspect-ratio:2290/1170}
 
   /* ---------- GIS ---------- */
   .gis-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;margin-top:28px}
@@ -256,6 +258,21 @@
         <div class="p2c-handle" id="p2cHandle"></div>
       </div>
       <div class="p2c-labels"><span>Field Sketch</span><span>Finished CAD</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="demo-repair" class="section section-alt">
+  <div class="wrap">
+    <h2><span class="sub">Demolition → Repair</span>Fire-Damaged Duplex, Before and After</h2>
+    <p style="max-width:660px">Drag the slider to compare the demolition plan, showing walls, doors, windows, and finishes to be removed, against the engineer-sealed repair plan for the same unit: new layout, fire-rated drywall at the demising wall, new kitchen and bath, and new impact windows.</p>
+    <div class="p2c-wrap wide">
+      <div class="p2c-slider wide">
+        <img src="assets/RS-RES-66_demolition-plan-before.webp" alt="Before: demolition floor plan" class="before-layer" loading="lazy">
+        <img src="assets/RS-RES-67_repair-plan-after.webp" alt="After: repair floor plan" class="after-layer" loading="lazy">
+        <div class="p2c-handle"></div>
+      </div>
+      <div class="p2c-labels"><span>Demolition Plan</span><span>Repair Plan</span></div>
     </div>
   </div>
 </section>
@@ -393,11 +410,16 @@ const PROJECTS = [
     id:"fire-damage",
     title:"Fire Damage Repair",
     county:"Palm Beach County",
-    cats:["RES","ASB","P2C"],
+    cats:["RES","ASB","BIM","P2C"],
     tools:"Revit, AutoCAD",
     desc:"Challenge: take a fire-damaged residence from field documentation through a full repair design, coordinated with a mechanical/electrical/plumbing engineer. Result: a 16-sheet, engineer-sealed permit set for a fire-damaged duplex unit, covering demolition, new roof framing, fire-rated demising-wall repair, windows and doors, and MEP plans under the 2023 Florida Building Code, paired with field photo and video documentation.",
     images:[
       {src:"RS-RES-03_fire-damage-repair-floorplan", alt:"Sheet S106 repair floor plan for a fire-damaged duplex unit, Ransom Solution title block"},
+      {src:"RS-RES-61_fire-damage-3d-model", alt:"Revit 3D model of the duplex, with the area of construction highlighted in red"},
+      {src:"RS-RES-63_repair-sections-details", alt:"Sheet S109 repair sections and details: roof framing sections, fire-rated demising wall detail, kitchen and bath elevations"},
+      {src:"RS-RES-64_door-window-details", alt:"Sheet S110 door and window installation details, wall sections, and door and window schedules"},
+      {src:"RS-RES-65_demolition-sections-details", alt:"Sheet S103 demolition sections and details"},
+      {src:"RS-RES-66_demolition-plan-before", alt:"Demolition floor plan showing walls, doors, windows, and finishes to be removed"},
       {src:"RS-ASB-23_fire-damage-early-concept", alt:"Early field documentation photo, fire-damaged framing"},
       {src:"RS-ASB-24_fire-damage-site-IMG0114jpeg", alt:"Site documentation photo, interior fire damage"},
       {src:"RS-ASB-31_fire-damage-site-IMG58481jpeg", alt:"Site documentation photo, structural framing damage"}
@@ -521,25 +543,25 @@ document.addEventListener("keydown", e=>{
 });
 
 /* ---------- Before/After slider ---------- */
-const slider = document.getElementById("p2cSlider");
-const handle = document.getElementById("p2cHandle");
-const afterLayer = document.getElementById("p2cAfter");
-let dragging = false;
-
-function setSlider(pct){
-  pct = Math.max(2, Math.min(98, pct));
-  afterLayer.style.clipPath = `inset(0 0 0 ${pct}%)`;
-  handle.style.left = pct + "%";
-}
-function posFromEvent(e){
-  const rect = slider.getBoundingClientRect();
-  const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-  return (x / rect.width) * 100;
-}
-slider.addEventListener("pointerdown", e=>{ dragging = true; setSlider(posFromEvent(e)); });
-window.addEventListener("pointermove", e=>{ if(dragging) setSlider(posFromEvent(e)); });
-window.addEventListener("pointerup", ()=> dragging = false);
-setSlider(50);
+document.querySelectorAll(".p2c-slider").forEach(slider=>{
+  const handle = slider.querySelector(".p2c-handle");
+  const afterLayer = slider.querySelector(".after-layer");
+  let dragging = false;
+  function setSlider(pct){
+    pct = Math.max(2, Math.min(98, pct));
+    afterLayer.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.style.left = pct + "%";
+  }
+  function posFromEvent(e){
+    const rect = slider.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    return (x / rect.width) * 100;
+  }
+  slider.addEventListener("pointerdown", e=>{ dragging = true; setSlider(posFromEvent(e)); });
+  window.addEventListener("pointermove", e=>{ if(dragging) setSlider(posFromEvent(e)); });
+  window.addEventListener("pointerup", ()=> dragging = false);
+  setSlider(50);
+});
 </script>
 </body>
 </html>
