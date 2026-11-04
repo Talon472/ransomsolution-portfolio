@@ -142,6 +142,8 @@
   .card-body p{font-size:.9rem;margin:0}
   .toolrow{font-size:.78rem;color:var(--ink-soft);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
   .toolrow strong{color:var(--ink);font-weight:600}
+  .pdf-link{display:block;margin-top:8px;color:var(--accent);font-weight:600;text-decoration:none}
+  .pdf-link:hover{text-decoration:underline}
 
   /* ---------- P2C slider ---------- */
   .p2c-wrap{max-width:760px;margin:36px auto 0}
@@ -273,6 +275,7 @@
         <div class="p2c-handle"></div>
       </div>
       <div class="p2c-labels"><span>Demolition Plan</span><span>Repair Plan</span></div>
+      <p style="text-align:center;margin-top:22px"><a class="btn" href="assets/RS-RES-FireDamageRepair-Duplex-PlanSet.pdf" target="_blank" rel="noopener">View the full 16-sheet plan set (PDF)</a></p>
     </div>
   </div>
 </section>
@@ -412,14 +415,21 @@ const PROJECTS = [
     county:"Palm Beach County",
     cats:["RES","ASB","BIM","P2C"],
     tools:"Revit, AutoCAD",
+    pdf:"RS-RES-FireDamageRepair-Duplex-PlanSet.pdf",
     desc:"Challenge: take a fire-damaged residence from field documentation through a full repair design, coordinated with a mechanical/electrical/plumbing engineer. Result: a 16-sheet, engineer-sealed permit set for a fire-damaged duplex unit, covering demolition, new roof framing, fire-rated demising-wall repair, windows and doors, and MEP plans under the 2023 Florida Building Code, paired with field photo and video documentation.",
     images:[
       {src:"RS-RES-03_fire-damage-repair-floorplan", alt:"Sheet S106 repair floor plan for a fire-damaged duplex unit, Ransom Solution title block"},
       {src:"RS-RES-61_fire-damage-3d-model", alt:"Revit 3D model of the duplex, with the area of construction highlighted in red"},
+      {src:"RS-RES-68_cover-sheet-g100", alt:"Sheet G100 cover: 3D view of the duplex with area of construction in red, property data table, and structural sheet index"},
+      {src:"RS-RES-66_demolition-plan-before", alt:"Demolition floor plan showing walls, doors, windows, and finishes to be removed"},
+      {src:"RS-RES-65_demolition-sections-details", alt:"Sheet S103 demolition sections and details"},
+      {src:"RS-RES-69_existing-roof-framing-demolition", alt:"Sheet S104 existing roof framing plan, demolition, with area of roof framing repairs"},
+      {src:"RS-RES-70_repair-roof-framing-plan", alt:"Sheet S107 repair roof framing plan with strap schedule, roof edge detail, and roof covering detail"},
+      {src:"RS-RES-71_repair-elevations", alt:"Sheet S108 repair elevations: north, east, south, and west, with new roof covering, windows, and doors"},
       {src:"RS-RES-63_repair-sections-details", alt:"Sheet S109 repair sections and details: roof framing sections, fire-rated demising wall detail, kitchen and bath elevations"},
       {src:"RS-RES-64_door-window-details", alt:"Sheet S110 door and window installation details, wall sections, and door and window schedules"},
-      {src:"RS-RES-65_demolition-sections-details", alt:"Sheet S103 demolition sections and details"},
-      {src:"RS-RES-66_demolition-plan-before", alt:"Demolition floor plan showing walls, doors, windows, and finishes to be removed"},
+      {src:"RS-RES-72_electrical-plans", alt:"Sheet E101 electrical lighting and power plans with fixture and device legends"},
+      {src:"RS-RES-73_mechanical-plans", alt:"Sheet M101 mechanical plan with mini-split heat pump and fan schedules and installation details"},
       {src:"RS-ASB-23_fire-damage-early-concept", alt:"Early field documentation photo, fire-damaged framing"},
       {src:"RS-ASB-24_fire-damage-site-IMG0114jpeg", alt:"Site documentation photo, interior fire damage"},
       {src:"RS-ASB-31_fire-damage-site-IMG58481jpeg", alt:"Site documentation photo, structural framing damage"}
@@ -481,7 +491,7 @@ function renderGrid(filter){
         <h3>${p.title}</h3>
         <div class="county">${p.county}</div>
         <p>${p.desc}</p>
-        <div class="toolrow"><strong>Tools:</strong> ${p.tools}</div>
+        <div class="toolrow"><strong>Tools:</strong> ${p.tools}${p.pdf ? `<a class="pdf-link" href="assets/${p.pdf}" target="_blank" rel="noopener">View full plan set (PDF) ↗</a>` : ""}</div>
       </div>
     </article>`;
   }).join("");
