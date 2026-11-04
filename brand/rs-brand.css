@@ -1,0 +1,50 @@
+/* ============================================================
+   RANSOM SOLUTION — SHARED BRAND LAYER
+   Matches www.ransomsolution.com (GoDaddy theme):
+     accent  #d2765c  (terracotta, meta theme-color)
+     accent-dark #ab5b44 (nav/link hover, small accent text)
+     tint    #faf2f0  (header band / alt sections)
+     ink     #1b1b1b  heading, #5e5e5e body
+     Type: Lato (uppercase section titles) + Lusitana (body, nav, buttons)
+   Paste this block into any Ransom Solution page and use the
+   .rs-header / .rs-footer markup for the shared chrome.
+   ============================================================ */
+:root{
+  --rs-accent:#d2765c;
+  --rs-accent-dark:#ab5b44;
+  --rs-accent-deep:#8f4a37;
+  --rs-tint:#faf2f0;
+  --rs-tint-2:#f4e4df;
+  --rs-white:#ffffff;
+  --rs-ink:#1b1b1b;
+  --rs-ink-soft:#5e5e5e;
+  --rs-ink-faint:#8a8580;
+  --rs-line:#ecdcd6;
+  --rs-line-strong:#d9c2ba;
+  --rs-radius:12px;
+  --rs-head:"Lato",Arial,sans-serif;
+  --rs-body:"Lusitana",Georgia,serif;
+}
+
+/* ---- shared header (logo centered over spaced uppercase nav) ---- */
+.rs-header{background:var(--rs-white);text-align:center;padding:22px 16px 14px;border-bottom:1px solid var(--rs-line)}
+.rs-header .rs-logo{display:inline-block;line-height:0}
+.rs-header .rs-logo img,.rs-header .rs-logo svg{width:58px;height:58px}
+.rs-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 28px;margin-top:14px}
+.rs-nav a{font-family:var(--rs-body);font-size:.95rem;text-transform:uppercase;letter-spacing:.214em;color:#151515;text-decoration:none;padding-bottom:4px;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.rs-nav a:hover{color:var(--rs-accent-dark)}
+.rs-nav a[aria-current="page"]{border-bottom-color:var(--rs-accent)}
+@media (max-width:560px){.rs-nav{gap:4px 16px}.rs-nav a{font-size:.78rem;letter-spacing:.14em}}
+
+/* ---- shared footer ---- */
+.rs-footer{background:var(--rs-tint);color:var(--rs-ink-soft);text-align:center;padding:28px 16px;font-family:var(--rs-body);font-size:.92rem;border-top:1px solid var(--rs-line)}
+.rs-footer a{color:var(--rs-accent-dark);text-decoration:none}
+.rs-footer a:hover{text-decoration:underline}
+.rs-footer .rs-foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem}
+
+/* ---- shared primitives ---- */
+.rs-title{font-family:var(--rs-head);font-weight:400;text-transform:uppercase;letter-spacing:1px;color:var(--rs-accent);line-height:1.15}
+.rs-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;background:var(--rs-accent);color:#fff;border:1px solid var(--rs-accent);border-radius:var(--rs-radius);padding:10px 32px;font-family:var(--rs-body);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.214em;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s}
+.rs-btn:hover{background:var(--rs-accent-dark);border-color:var(--rs-accent-dark)}
+.rs-btn.ghost{background:transparent;color:var(--rs-accent-dark);border-color:var(--rs-accent)}
+.rs-btn.ghost:hover{background:var(--rs-tint)}
